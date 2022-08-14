@@ -1,8 +1,16 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 #gameboy{
     position: relative;
-    width: 450px;
+    width: 400px;
     height: 650px;
 }
+
 #gameboy .outer{
     position: relative;
     background-color: yellow;
@@ -10,11 +18,18 @@
     border: none;
     border-radius: 1em 1em 5em 1em;
 }
+.inner{
+    position: relative;
+    height: 100%;
+    /*background-color: green;*/
+    width:85%;
+    margin:0 auto;
+}
 #gameboy .bezel{
     position: absolute;
     top: 5%;
-    left: 7%;
-    width: 24rem;
+    /*left: 7%;*/
+    width: 100%;
     height: 17em;
     background-color: black;
     border-radius: 1em 1em 1em 1em;
@@ -22,9 +37,46 @@
 #gameboy .screen{
     position: absolute;
     top: 14%;
-    left: 13%;
+    left: 10%;
     background-color: grey;
-    width: 18rem;
+    width: 80%;
     height: 12rem;
     /*z-index: 99999;*/
+}
+#gameboy .controls-1{
+    position: absolute;
+    display: flex;
+    top: 52%;
+    width: 100%;
+    height: 100px;
+    /*background-color: purple;*/
+}
+#gameboy .left-side{
+    height: 100%;
+    width: 50%;
+    /*background-color: pink;*/
+}
+#gameboy .right-side{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    /*background-color: lightblue;*/
+}
+#gameboy .b-button{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+}
+#gameboy .a-button{
+    position: absolute;
+    left: 65%;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
 }
