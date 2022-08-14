@@ -1,0 +1,30 @@
+#gameboy{
+    position: relative;
+    width: 450px;
+    height: 650px;
+}
+#gameboy .outer{
+    position: relative;
+    background-color: yellow;
+    height: 100%;
+    border: none;
+    border-radius: 1em 1em 5em 1em;
+}
+#gameboy .bezel{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    width: 24rem;
+    height: 17em;
+    background-color: black;
+    border-radius: 1em 1em 1em 1em;
+}
+#gameboy .screen{
+    position: absolute;
+    top: 14%;
+    left: 13%;
+    background-color: grey;
+    width: 18rem;
+    height: 12rem;
+    /*z-index: 99999;*/
+}
