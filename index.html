@@ -6,31 +6,45 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<script type="module" src="./pokemon.js"></script>
+    <script type="module" src="./pokemon.js"></script>
+    <script type="module" src="./home.js"></script>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./home.css">
 </head>
 <body>
 
 <div id="gameboy">
     <div class="outer">
-
-
         <div class="inner">
             <div class="bezel">
-                <div class="screen">
+
+                <div id="app" class="screen">
 
                 </div>
+
             </div>
             <div class="controls-1">
                 <div class="left-side">
-                    <div class="dpad-up"></div>
-                    <div class="dpad-middle-section">
-                        <div class="dpad-left">
+                    <div class="dpad">
+                        <div class="dpad-top-section">
+                            <div class="top-left"></div>
+                            <div class="dpad-up"></div>
+                            <div class="top-right"></div>
                         </div>
-                        <div class="dpad-right">
+                        <div class="dpad-middle-section">
+                            <div class="dpad-left">
+                            </div>
+                            <div class="dpad-middle"></div>
+                            <div class="dpad-right">
+                            </div>
+                        </div>
+                        <div class="dpad-bottom-section">
+                            <div class="bottom-left"></div>
+                            <div class="dpad-down"></div>
+                            <div class="bottom-right"></div>
                         </div>
                     </div>
-                    <div class="dpad-down"></div>
+
 
                 </div>
                 <div class="right-side">
@@ -39,8 +53,14 @@
                 </div>
             </div>
             <div class="controls-2">
-                <div class="select"></div>
-                <div class="start"></div>
+                <div class="button-row">
+                    <div class="select"></div>
+                    <div class="start"></div>
+                </div>
+                <div class="label-row">
+                    <p class="select-label">SELECT</p>
+                    <p class="start-label">START</p>
+                </div>
             </div>
         </div>
 
