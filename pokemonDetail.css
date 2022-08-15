@@ -7,6 +7,15 @@
     display: block;
 }
 #pokemonDetail img{
-    width: 6.25em;
-    height: 6.25em;
+    width: 8em;
+    height: 8em;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    font-size: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
