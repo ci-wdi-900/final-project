@@ -1,9 +1,12 @@
 import {loadAllBasic, getDetail} from "./pokemon.js";
 import {Home} from './home.js';
+import {PokemonDetail} from "./pokemonDetail.js";
 
 const app = document.querySelector("#app");
-let pkmn = [];
+const dpadRight = document.querySelector(".dpad-right");
 
+let pkmn = [];
+let next = 0;
 // Pokemon OG
 
 // Loads the initial 151 Pokémon and save them to local storage. If data already exists, existing data will be used instead.
@@ -35,8 +38,13 @@ window.addEventListener('load', function () {
             })
         // console.log(pokemonData);
     }
-
+    pkmn = JSON.parse(window.localStorage.getItem('pokemonData'));
+    console.log(pkmn);
     app.innerHTML = Home();
+})
+dpadRight.addEventListener('click', function () {
+    app.innerHTML = PokemonDetail(pkmn[next]);
+    if (next !== 151) next++;
 })
 
 // const pokemonData = JSON.parse(window.localStorage.getItem('pokemonData'));

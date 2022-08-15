@@ -1,0 +1,12 @@
+#pokemonDetail{
+    padding-top: .625em;
+    text-align: center;
+    font-weight: bold;
+}
+#pokemonDetail a{
+    display: block;
+}
+#pokemonDetail img{
+    width: 6.25em;
+    height: 6.25em;
+}
