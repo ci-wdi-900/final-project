@@ -1,18 +1,4 @@
-// import {general} from "./alerts";
-// export function PokemonDetail(pokemon) {
-//     console.log(this);
-//     return `
-//     <div id="pokemonDetail">
-//     <header>${pokemon.name}</header>
-//     <img src=${pokemon.sprites.front_default} alt="">
-//     <nav>
-//     <a href="#" id="addButton">ADD TO POKEDEX</a>
-//     <a href="#" id="viewButton">VIEW POKEDEX</a>
-// </nav>
-//
-// </div>
-//     `
-// }
+
 
 export function PokemonDetail(pokemon, pokedex) {
 
