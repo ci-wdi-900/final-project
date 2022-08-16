@@ -6,6 +6,8 @@ const app = document.querySelector("#app");
 
 // Pokemon OG
 let pkmn = [];
+let pokedex = [];
+
 let current = 0;
 
 // Loads the initial 151 Pokémon and save them to local storage. If data already exists, existing data will be used instead.
@@ -59,7 +61,7 @@ window.addEventListener('keydown', function (e) {
             // app.innerHTML = PokemonDetail(pkmn[current]);
             if (current !== 151) {
                 app.innerHTML = "";
-                app.append(PokemonDetail(pkmn[current]));
+                app.append(PokemonDetail(pkmn[current], pokedex));
                 ++current;
             }
             break;
@@ -69,7 +71,7 @@ window.addEventListener('keydown', function (e) {
             if (current !== 0) {
                 app.innerHTML = "";
                 --current
-                app.append(PokemonDetail(pkmn[current]));
+                app.append(PokemonDetail(pkmn[current], pokedex));
                 // current--;
             }
             break;

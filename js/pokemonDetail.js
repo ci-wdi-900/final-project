@@ -14,7 +14,7 @@
 //     `
 // }
 
-export function PokemonDetail(pokemon) {
+export function PokemonDetail(pokemon, pokedex) {
 
     const container = document.createElement("div");
     container.setAttribute('id', 'pokemonDetail');
@@ -32,6 +32,8 @@ export function PokemonDetail(pokemon) {
     addButton.textContent = "ADD TO POKEDEX";
     addButton.addEventListener('click', function () {
         console.log('addButton');
+        pokedex.push(pokemon);
+        localStorage.setItem("pokedex", JSON.stringify(pokedex));
         container.appendChild(generalAlert("success", `${pokemon.name} has been added to the pokedex`));
     })
 
