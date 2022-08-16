@@ -1,6 +1,7 @@
 import {loadAllBasic, getDetail} from "./pokemon.js";
 import {Home} from './home.js';
 import {PokemonDetail} from "./pokemonDetail.js";
+
 const app = document.querySelector("#app");
 
 // Pokemon OG
@@ -16,8 +17,14 @@ window.addEventListener('load', function () {
     if (window.localStorage.getItem("pokemonData") === null) {
         pokemonInit();
     }
+    // Loads Pokemon Data into "state"(insert airquotes here)
     if (window.localStorage.getItem("pokemonData") !== null) {
         pkmn = JSON.parse(window.localStorage.getItem('pokemonData'));
+    }
+    // Loads Pokedex Data into "state"(inset airquotes here)
+    if (window.localStorage.getItem("pokedex") !== null) {
+        pokedex = JSON.parse(window.localStorage.getItem("pokedex"));
+        console.log(pokedex);
     }
 })
 
@@ -76,9 +83,6 @@ window.addEventListener('keydown', function (e) {
             break;
     }
 })
-
-
-
 
 
 function disableScroll() {
