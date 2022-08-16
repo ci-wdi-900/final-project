@@ -1,56 +1,56 @@
 import {loadAllBasic, getDetail} from "./pokemon.js";
 import {Home} from './home.js';
 import {PokemonDetail} from "./pokemonDetail.js";
-
+// import {general} from './alerts.js';
 const app = document.querySelector("#app");
-const dpadRight = document.querySelector(".dpad-right");
 
+// Pokemon OG
 let pkmn = [];
 let current = 0;
-// Pokemon OG
 
 // Loads the initial 151 Pokémon and save them to local storage. If data already exists, existing data will be used instead.
 window.addEventListener('load', function () {
     console.log("reloaded");
     disableScroll();
     if (window.localStorage.getItem("pokemonData") === null) {
-        // Load basic pokemon information
-        loadAllBasic()
-            .then(data => {
-                console.log(data);
-                // Use data from loadAllBasic to query for more detailed information on each pokemon.
-                data.forEach(pokemon => {
-                        console.log(pokemon);
-                        getDetail(pokemon)
-                            .then(data => {
-                                // Add new data to array called pkmn
-                                pkmn.push(data);
-                                console.log("detail", data);
-                            })
-                            .catch(err => console.log(err))
-                            .finally(() => {
-                                console.log(pkmn);
-                                // set pkmn to local storage
-                                window.localStorage.setItem('pokemonData', JSON.stringify(pkmn))
-                            })
-                    }
-                )
-
-            })
-            .catch(err => {
-                console.log(err);
-            })
-        // console.log(pokemonData);
+        pokemonInit();
     }
     if (window.localStorage.getItem("pokemonData") !== null) {
         pkmn = JSON.parse(window.localStorage.getItem('pokemonData'));
     }
-
 })
 
+// Initializes pokemon data and save it to local storage
+const pokemonInit = () => {
+    loadAllBasic()
+        .then(data => {
+            console.log(data);
+            // Use data from loadAllBasic to query for more detailed information on each pokemon.
+            data.forEach(pokemon => {
+                    console.log(pokemon);
+                    getDetail(pokemon)
+                        .then(data => {
+                            // Add new data to array called pkmn
+                            pkmn.push(data);
+                            console.log("detail", data);
+                        })
+                        .catch(err => console.log(err))
+                        .finally(() => {
+                            console.log(pkmn);
+                            // set pkmn to local storage
+                            window.localStorage.setItem('pokemonData', JSON.stringify(pkmn))
+                        })
+                }
+            )
 
-// console.log(pkmn);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
 app.innerHTML = Home();
+
 window.addEventListener('keydown', function (e) {
     console.log(e.key)
 
@@ -77,10 +77,7 @@ window.addEventListener('keydown', function (e) {
 })
 
 
-// dpadRight.addEventListener('click', function () {
-//     app.innerHTML = PokemonDetail(pkmn[current]);
-//     if (current !== 151) current++;
-// })
+
 
 
 function disableScroll() {
