@@ -1,0 +1,23 @@
+#home{
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    display: block;
+    margin: 0 auto;
+    /*width: 6.25em;*/
+    /*height: 6.25em;*/
+    width: 70%;
+}
+ .sub{
+     margin-top: -14%;
+     margin-bottom: 5%;
+    width: 50px;
+}
+.start-button{
+    display: block;
+    font-weight: bold;
+}
+.start-button:hover{
+    cursor: pointer;
+}

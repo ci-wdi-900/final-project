@@ -1,0 +1,197 @@
+* {
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+#gameboy {
+    position: relative;
+    width: 25em;
+    height: 43.625em;
+}
+
+.outer {
+    position: relative;
+    background-color: #FFCB05;
+    height: 100%;
+    border: none;
+    border-radius: 1em 1em 5em 1em;
+}
+
+.inner {
+    position: relative;
+    height: 100%;
+    /*background-color: green;*/
+    width: 85%;
+    margin: 0 auto;
+}
+
+.bezel {
+    position: absolute;
+    top: 5%;
+    /*left: 7%;*/
+    width: 100%;
+    height: 17em;
+    background-color: black;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.screen {
+    position: absolute;
+    top: 14%;
+    left: 10%;
+    background-color: lightgray;
+    width: 80%;
+    height: 12rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*z-index: 99999;*/
+}
+
+.controls-1 {
+    position: absolute;
+    display: flex;
+    top: 52%;
+    width: 100%;
+    height: 6.25em;
+    /*background-color: purple;*/
+}
+
+.left-side {
+    height: 100%;
+    width: 50%;
+    /*background-color: pink;*/
+}
+
+.right-side {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    /*background-color: lightblue;*/
+}
+
+.b-button {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 3.75em;
+    height: 3.75em;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.a-button {
+    position: absolute;
+    left: 65%;
+    width: 3.75em;
+    height: 3.75em;
+    background-color: black;
+    border-radius: 50%;
+}
+.dpad{
+    height: 100%;
+}
+.dpad-top-section{
+    display: flex;
+    /*background-color: green;*/
+    height: 30%;
+}
+.dpad-top-section .top-left{
+    height: 100%;
+    width: 20%;
+    /*background-color: aliceblue;*/
+}
+
+.dpad-up {
+    background-color: black;
+    width: 20%;
+    height: 100%;
+    border-radius: .5rem .5rem 0 0;
+}
+.dpad-middle-section{
+    display: flex;
+    flex-direction: row;
+    height: 34%;
+    /*background-color: blue;*/
+}
+.dpad-middle{
+    background-color: black;
+    height: 100%;
+    width: 20%;
+}
+.dpad-left{
+    background-color: black;
+    width: 20%;
+    height: 100%;
+    border-radius: .5rem 0 0 .5rem;
+}
+.dpad-right{
+    background-color: black;
+    width: 20%;
+    height: 100%;
+    border-radius: 0 .5rem  .5rem 0;
+}
+.dpad-bottom-section{
+    display: flex;
+    height: 30%;
+    /*background-color: maroon;*/
+}
+.dpad .bottom-left{
+    width: 20%;
+    height: 100%;
+    /*background-color: aliceblue;*/
+}
+.dpad-down{
+    background-color: black;
+    width: 20%;
+    height: 100%;
+    border-radius: 0 0 .5rem .5rem;
+}
+.controls-2{
+    position: absolute;
+    bottom: 23%;
+    left: 30%;
+    width: 35%;
+    /*background-color: green;*/
+}
+.controls-2 .button-row{
+    display: flex;
+    height: 1rem;
+    /*background-color: blanchedalmond;*/
+}
+.controls-2 .label-row{
+    display: flex;
+    font-size: 10px;
+}
+.select{
+    margin-right: .625rem;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 1em;
+}
+.start{
+    /*padding-right: 3px;*/
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-radius: 1em;
+}
+.select-label{
+    margin-right: .625rem;
+    padding-top: .312rem;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+.start-label{
+    width: 50%;
+    padding-top: .312rem;
+    text-align: center;
+    font-weight: bold;
+}
