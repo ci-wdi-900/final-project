@@ -1,7 +1,6 @@
 import {loadAllBasic, getDetail} from "./pokemon.js";
 import {Home} from './home.js';
 import {PokemonDetail} from "./pokemonDetail.js";
-// import {general} from './alerts.js';
 const app = document.querySelector("#app");
 
 // Pokemon OG
